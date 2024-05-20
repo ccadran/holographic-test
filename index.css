@@ -39,6 +39,7 @@ body {
   height: 220px;
   box-sizing: border-box;
   position: relative;
+  transition: transform 2s;
 }
 .card__wrapper {
   perspective: 600px;
@@ -47,6 +48,7 @@ body {
 }
 .card__3d {
   transform: rotateY(var(--r-x)) rotateX(var(--r-y));
+  transition: transform 0.4s cubic-bezier(0.33, 1, 0.68, 1);
   position: absolute;
   inset: 0;
   display: flex;

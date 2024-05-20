@@ -1,8 +1,20 @@
 const el = document.querySelector(".card");
 const wrap = document.querySelector(".card__wrapper");
+const card_3d = document.querySelector(".card__3d");
 let w = el.clientWidth;
 let h = el.clientHeight;
 let b = el.getBoundingClientRect();
+
+const defaultBackgound = () => {
+  document.documentElement.style.setProperty("--x", "50%");
+  document.documentElement.style.setProperty("--y", "50%");
+  document.documentElement.style.setProperty("--bg-x", "50%");
+  document.documentElement.style.setProperty("--bg-y", "50%");
+  document.documentElement.style.setProperty("--r-x", "0deg");
+  document.documentElement.style.setProperty("--r-y", "0deg");
+};
+defaultBackgound();
+
 el.addEventListener("mousemove", (e) => {
   let X = (e.clientX - b.left) / w;
   let Y = (e.clientY - b.top) / h;
@@ -13,7 +25,6 @@ el.addEventListener("mousemove", (e) => {
   let bgX = 40 + 20 * X;
   let bgY = 40 + 20 * Y;
 
-  console.log(X, Y);
   document.documentElement.style.setProperty("--x", 100 * X + "%");
   document.documentElement.style.setProperty("--y", 100 * Y + "%");
 
@@ -22,4 +33,8 @@ el.addEventListener("mousemove", (e) => {
 
   document.documentElement.style.setProperty("--r-x", rX + "deg");
   document.documentElement.style.setProperty("--r-y", rY + "deg");
+});
+
+el.addEventListener("mouseleave", () => {
+  defaultBackgound();
 });
