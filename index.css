@@ -40,6 +40,7 @@ body {
   box-sizing: border-box;
   position: relative;
   transition: transform 2s;
+  /* transform: rotate(27deg); */
 }
 .card__wrapper {
   perspective: 600px;
@@ -54,11 +55,11 @@ body {
   display: flex;
   align-items: center;
   /* clip-path: inset(0 0 0 0 round 48px); */
-  clip-path: inset(0 0 0 0 round 16px 16px 116px 116px);
+  clip-path: inset(0 0 0 0 round 24px 24px 116px 116px);
 }
 .card__image {
   /* clip-path: inset(0 0 0 0 round 48px); */
-  clip-path: inset(0 0 0 0 round 16px 16px 116px 116px);
+  clip-path: inset(0 0 0 0 round 24px 24px 116px 116px);
 }
 .card__image img {
   display: block;
@@ -74,7 +75,7 @@ body {
   z-index: 20;
   mix-blend-mode: soft-light;
   /* clip-path: inset(0 0 1px 0 round 48px); */
-  clip-path: inset(0 0 0 0 round 16px 16px 116px 116px);
+  clip-path: inset(0 0 0 0 round 24px 24px 116px 116px);
 
   background: radial-gradient(
     farthest-corner circle at var(--x) var(--y),
@@ -93,7 +94,7 @@ body {
   will-change: background;
   transition-property: opacity;
   /* clip-path: inset(0 0 1px 0 round 48px); */
-  clip-path: inset(0 0 0 0 round 16px 16px 116px 116px);
+  clip-path: inset(0 0 0 0 round 24px 24px 116px 116px);
 
   background-blend-mode: hue, hue, hard-light, overlay;
   background: var(--rainbow), var(--diagonal);
